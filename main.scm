@@ -1,13 +1,13 @@
-(define-module lisp-spd.main
+(define-module lisp-cpd.main
   (use file.util)
   (use rfc.md5)
 ;;  (use util.lcs)
   (export
-   lisp-spd
+   lisp-cpd
    )
   )
 
-(select-module lisp-spd.main)
+(select-module lisp-cpd.main)
 
 (define-constant +max-depth+ 5)
 (define-constant +least-tokes+ 5)
@@ -33,7 +33,6 @@
 	 '())
 	(else (proc tree))))
 
-
 (define (leaf<num tree num)
   (cond ((pair? tree)
 	 (aif (leaf<num (car tree) num)
@@ -45,7 +44,7 @@
 
 ;; (leaf<num '(1 2 3 4) 3)
 
-(define (lisp-spd paths)
+(define (lisp-cpd paths)
   (define (make-digest str)
     (if (string? str)
 	(md5-digest-string str)
@@ -101,4 +100,4 @@
     ret))
 ;;   (lcs-with-positions treea
 
-;; (lisp-spd '("/home/tyt/base.scm" "/home/tyt/macro-old.scm"))
+;; (lisp-cpd '("/home/tyt/base.scm" "/home/tyt/macro-old.scm"))

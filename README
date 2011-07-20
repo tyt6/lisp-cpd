@@ -1,0 +1,11 @@
+Lisp's copy and paste detection program.
+slow.
+
+cpdが見つからなかったので適当に作ってみた。
+非常に遅いですし検知ミスもあるかもしれません。(depth5より上は拾わない)
+同じ計算を何度もしているのは分かっていますのでツッコミは無しで。
+所要時間2時間程度gauche忘れてたのでリハビリです。
+副作用バリバリでfile->sexp-list以外はschemeじゃない方が早そうなプログラムです。
+
+動作確認
+■ Gauche scheme shell, version 0.9 [utf-8,pthreads], x86_64-unknown-linux-gnu
