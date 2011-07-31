@@ -1,11 +1,20 @@
+lisp-cpd ver 0.1.0
+
 Lisp's copy and paste detection program.
-slow.
+japanese:
+gauche専用ではあるが、cpdが見つからなかったので適当に作ってみた。
+真似すればcommon-lisp専用なども作れるだろう。
 
-cpdが見つからなかったので適当に作ってみた。
-非常に遅いですし検知ミスもあるかもしれません。(depth5より上は拾わない)
-同じ計算を何度もしているのは分かっていますのでツッコミは無しで。
-所要時間2時間程度gauche忘れてたのでリハビリです。
-副作用バリバリでfile->sexp-list以外はschemeじゃない方が早そうなプログラムです。
+INSTALL:
+load path上にこれを展開。 GAUCHE_LOAD_PATH 参照
+( $loadpath/lisp-cpd/内にcpd.scmを配置する。)
 
+使い方:
+ cpd.scn : (define-constant +least-tokes+ 5) を好きな値に変更する。
+ gosh main.scm a.scm b.scm
+
+使い道:
+ イマイチ
+ 
 動作確認
 ■ Gauche scheme shell, version 0.9 [utf-8,pthreads], x86_64-unknown-linux-gnu
