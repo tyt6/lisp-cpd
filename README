@@ -4,6 +4,7 @@ Lisp's copy and paste detection program.
 japanese:
 gauche専用ではあるが、cpdが見つからなかったので適当に作ってみた。
 真似すればcommon-lisp専用なども作れるだろう。
+ソース内の循環構造には未対応。
 
 INSTALL:
 load path上にこれを展開。 GAUCHE_LOAD_PATH 参照
